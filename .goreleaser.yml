@@ -21,7 +21,7 @@ builds:
     goos:
       - linux
     goarch:
-      - amd64
+      - arm64
     flags:
       - -tags=full,fts5,netgo
       - -trimpath
@@ -108,7 +108,7 @@ archives:
 
 dockers:
   - goos: linux
-    goarch: amd64
+    goarch: arm64
     ids:
       - fleet
       - fleetctl
@@ -120,7 +120,7 @@ dockers:
       - 'fleetdm/fleet:v{{ .Major }}'
 
   - goos: linux
-    goarch: amd64
+    goarch: arm64
     ids:
       - fleetctl
     dockerfile: tools/fleetctl-docker/Dockerfile
@@ -143,7 +143,7 @@ changelog:
 
 release:
   github:
-    owner: fleetdm
+    owner: bardiharborow
     name: fleet
   draft: true
   prerelease: auto
